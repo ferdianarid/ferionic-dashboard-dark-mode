@@ -1,5 +1,5 @@
-## React and Redux Public Base Template
-React and Redux with Tailwind CSS Base Template for your Project
+## React Skeleton with Dark Mode
+Web article made complete with skeleton structure and dark mode switcher. Using localstorage and api
 
 <img src="src/assets/preview.png" alt="preview" />
 
