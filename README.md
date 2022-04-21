@@ -1,4 +1,4 @@
-## React Skeleton with Dark Mode
+## Dashboard Page with Dark Mode
 Web article made complete with skeleton structure and dark mode switcher. Using localstorage and api
 
 <img src="src/assets/preview.png" alt="preview" />
