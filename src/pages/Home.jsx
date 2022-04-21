@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { FetchNewsRequest } from "reduxs/actions"
-
-const TitleComponent = ({ children }) => {
-    return (
-        <h1 className="font-bold text-2xl text-indigo-600">{children}</h1>
-    )
-}
+import TitleComponent from 'components/TitleComponent'
 
 const Home = ({ fetchAllNews, newsList }) => {
     useEffect(() => {
@@ -15,7 +10,7 @@ const Home = ({ fetchAllNews, newsList }) => {
     return (
         <React.Fragment>
             <div className="flex flex-col justify-center items-center">
-                <h1 className="font-bold text-indigo-800 text-3xl mt-10">Users List</h1>
+                <h1 className="font-bold text-indigo-800 text-3xl mt-10">News List</h1>
                 {
                     newsList.loading ? (<h1>Fetching Newsletter...</h1>) :
                         newsList.error ? (<h3 className='text-red-600 font-medium text-sm'>{newsList.error}</h3>) :
@@ -26,7 +21,7 @@ const Home = ({ fetchAllNews, newsList }) => {
                                         newsList.news &&
                                         newsList.news.map((items) => (
                                             <div key={items.id}>
-                                                <li>{items.title}</li>
+                                                <TitleComponent>{items.title}</TitleComponent>
                                             </div>
                                         ))
                                     }
