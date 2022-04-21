@@ -1,16 +1,18 @@
 import React from 'react'
 import photo from "assets/photo.png"
 import ferionic from "assets/ferionic.png"
+import Toggle from 'utils/ThemeToggle'
 
 const Sidebar = ({ setOpen }) => {
     return (
         <React.Fragment>
-            <aside class="lg:hidden fixed overflow-y-scroll z-50 top-0 left-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+            <aside class="lg:hidden dark:bg-gray-800 fixed overflow-y-scroll z-50 top-0 left-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
                 <div>
                     <div class="-mx-6 flex justify-between items-center px-6 py-4">
                         <button href="#" title="home">
                             <img src={ferionic} class="w-32" alt="ferionic" />
                         </button>
+                        <Toggle addclass={"block lg:hidden"} />
                         <button class="w-12 h-16 -mr-2 border-r lg:hidden">
                             <svg onClick={() => setOpen(false)} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -20,8 +22,8 @@ const Sidebar = ({ setOpen }) => {
 
                     <div class="mt-8 text-center">
                         <img src={photo} alt="" class="w-32 h-32 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
-                        <h5 class="block mt-4 text-xl font-semibold text-gray-600 lg:hidden">Ferdian Ahmad R</h5>
-                        <span class="block text-gray-400 lg:hidden">Frontend Engineer</span>
+                        <h5 class="block mt-4 dark:text-white text-xl font-semibold text-gray-600 lg:hidden">Ferdian Ahmad R</h5>
+                        <span class="block text-gray-400 dark:text-gray-400 lg:hidden">Frontend Engineer</span>
                     </div>
 
                     <ul class="space-y-2 tracking-wide mt-8">
@@ -41,7 +43,7 @@ const Sidebar = ({ setOpen }) => {
                                     <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
                                     <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
                                 </svg>
-                                <span class="group-hover:text-gray-700">Categories</span>
+                                <span class="group-hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Categories</span>
                             </button>
                         </li>
                         <li>
@@ -50,7 +52,7 @@ const Sidebar = ({ setOpen }) => {
                                     <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
                                     <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
                                 </svg>
-                                <span class="group-hover:text-gray-700">Reports</span>
+                                <span class="group-hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Reports</span>
                             </button>
                         </li>
                         <li>
@@ -59,7 +61,7 @@ const Sidebar = ({ setOpen }) => {
                                     <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
                                     <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
                                 </svg>
-                                <span class="group-hover:text-gray-700">Other data</span>
+                                <span class="group-hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Other data</span>
                             </button>
                         </li>
                         <li>
@@ -68,7 +70,7 @@ const Sidebar = ({ setOpen }) => {
                                     <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
                                     <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
                                 </svg>
-                                <span class="group-hover:text-gray-700">Finance</span>
+                                <span class="group-hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Finance</span>
                             </button>
                         </li>
                     </ul>
@@ -79,7 +81,7 @@ const Sidebar = ({ setOpen }) => {
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                         </svg>
-                        <span class="group-hover:text-gray-700">Logout</span>
+                        <span class="group-hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Logout</span>
                     </button>
                 </div>
             </aside>
