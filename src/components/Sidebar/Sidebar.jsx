@@ -1,13 +1,15 @@
 import React from 'react'
+import photo from "assets/photo.png"
+import ferionic from "assets/ferionic.png"
 
 const Sidebar = ({ setOpen }) => {
     return (
         <React.Fragment>
-            <aside class="fixed z-50 top-0 left-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+            <aside class="lg:hidden fixed overflow-y-scroll z-50 top-0 left-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
                 <div>
                     <div class="-mx-6 flex justify-between items-center px-6 py-4">
                         <button href="#" title="home">
-                            <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg" class="w-32" alt="tailus logo" />
+                            <img src={ferionic} class="w-32" alt="ferionic" />
                         </button>
                         <button class="w-12 h-16 -mr-2 border-r lg:hidden">
                             <svg onClick={() => setOpen(false)} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -17,9 +19,9 @@ const Sidebar = ({ setOpen }) => {
                     </div>
 
                     <div class="mt-8 text-center">
-                        <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
-                        <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Cynthia J. Watts</h5>
-                        <span class="hidden text-gray-400 lg:block">Admin</span>
+                        <img src={photo} alt="" class="w-32 h-32 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
+                        <h5 class="block mt-4 text-xl font-semibold text-gray-600 lg:hidden">Ferdian Ahmad R</h5>
+                        <span class="block text-gray-400 lg:hidden">Frontend Engineer</span>
                     </div>
 
                     <ul class="space-y-2 tracking-wide mt-8">
