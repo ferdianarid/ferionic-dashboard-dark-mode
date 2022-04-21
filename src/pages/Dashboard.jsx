@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
 import Sidebar from "components/Sidebar/Sidebar"
+import photo from "assets/photo.png"
+import ferionic from "assets/ferionic.png"
 
 const Dashboard = () => {
     const [open, setOpen] = useState(false)
     return (
         <React.Fragment>
-            <aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+            <aside class="ml-[-100%] fixed overflow-y-scroll z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
                 <div>
                     <div class="-mx-6 px-6 py-4">
                         <button alt="links" href="#" title="home">
-                            <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg" class="w-32" alt="tailus logo" />
+                            <img src={ferionic} class="w-32" alt="ferionic" />
                         </button>
                     </div>
 
                     <div class="mt-8 text-center">
-                        <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
-                        <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Cynthia J. Watts</h5>
-                        <span class="hidden text-gray-400 lg:block">Admin</span>
+                        <img src={photo} alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
+                        <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Ferdian Ahmad R</h5>
+                        <span class="hidden text-gray-400 lg:block">Frontend Engineer</span>
                     </div>
 
                     <ul class="space-y-2 tracking-wide mt-8">
