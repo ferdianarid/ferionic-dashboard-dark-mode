@@ -1,1 +1,1 @@
-// Apis
+export const REACT_APP_API_KEY = "744060970d61434da9aca75271757f6d"

@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# env
+src/apis/
+src/apis/index.js
+
 # testing
 /coverage
 
